@@ -1,0 +1,13 @@
+- name: Install pkgs
+  hosts: debian_servers  # Matches the group in inventory
+  become: yes
+  tasks:
+    - name: Install packages using apt
+      apt:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - vim
+        - curl
+        - unzip
+        - htop
