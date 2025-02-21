@@ -1,0 +1,19 @@
+- name: Shutdown or Restart Clients
+  hosts: debian_servers # Matches the group in inventory
+  become: yes
+  tasks:
+    # - name: Wake up machines via WoL
+    #   community.general.wakeonlan:
+    #     mac: "00:21:97:42:ee:c6"  
+    #   tags:
+    #     - wol
+
+    - name: Unconditionally reboot the machine with all defaults
+      ansible.builtin.reboot:
+      tags:
+        - reboot
+
+    - name: Unconditionally shut down the machine with all defaults
+      community.general.shutdown:
+      tags:
+        - shutdown
