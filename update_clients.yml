@@ -1,5 +1,5 @@
 - name: Update Debian machines
-  hosts: debian_servers  # Matches the group in inventory
+  hosts: debian_servers 
   become: yes
   tasks:
     - name: Update apt-get repo and cache

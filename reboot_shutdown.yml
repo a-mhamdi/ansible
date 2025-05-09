@@ -1,5 +1,5 @@
 - name: Shutdown or Restart Clients
-  hosts: debian_servers # Matches the group in inventory
+  hosts: debian_servers
   become: yes
   tasks:
     # - name: Wake up machines via WoL
