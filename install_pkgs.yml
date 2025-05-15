@@ -11,3 +11,5 @@
         - curl
         - unzip
         - htop
+        - tmux
+        
