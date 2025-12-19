@@ -1,6 +1,7 @@
 # README #
 
 ## Overview
+
 **Ansible** is an open-source automation tool that simplifies configuration management, application deployment, and task automation. 
 
 ## Installation
@@ -28,10 +29,10 @@ ansible -i hosts.ini all -m command -a "uptime"
 
 ### Update Hosts
 ```zsh
-ansible-playbook -i hosts.ini update_clients.yml -K
+ansible-playbook -i hosts.ini upd_usdge.yml -K
 ```
 
-### Reboot Servers
+### Reboot Hosts
 ```zsh
 ansible-playbook -i hosts.ini reboot_shutdown.yml --tags "reboot" -K
 ```
