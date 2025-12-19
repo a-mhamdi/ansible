@@ -1,5 +1,5 @@
 - name: Shutdown or Restart Clients
-  hosts: usdge_servers
+  hosts: all
   become: yes
   tasks:
 

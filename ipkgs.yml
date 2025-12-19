@@ -1,5 +1,5 @@
 - name: Install pkgs
-  hosts: usdge_servers
+  hosts: all
   become: yes
   tasks:
 

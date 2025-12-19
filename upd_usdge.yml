@@ -1,5 +1,5 @@
-- name: Update Debian machines
-  hosts: usdge_servers 
+- name: Update `USDGE` machines
+  hosts: all 
   become: yes
   tasks:
 
