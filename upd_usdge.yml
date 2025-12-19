@@ -19,8 +19,6 @@
       ansible.builtin.apt:
         autoremove: yes
 
-    - name: Reboot if necessary
-      ansible.builtin.reboot:
-        when: apt_update_status.changed
-
-    
+    # - name: Reboot if necessary
+    #   ansible.builtin.reboot:
+    #     when: apt_update_status.changed
