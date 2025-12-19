@@ -1,7 +1,8 @@
 - name: Shutdown or Restart Clients
-  hosts: debian_servers
+  hosts: usdge_servers
   become: yes
   tasks:
+
     # - name: Wake up machines via WoL
     #   community.general.wakeonlan:
     #     mac: "00:21:97:42:ee:c6"  
@@ -13,7 +14,7 @@
       tags:
         - reboot
 
-    - name: Unconditionally shut down the machine with all defaults
+    - name: Unconditionally shutdown the machine with all defaults
       community.general.shutdown:
       tags:
         - shutdown

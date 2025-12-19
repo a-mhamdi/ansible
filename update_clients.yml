@@ -1,20 +1,24 @@
 - name: Update Debian machines
-  hosts: debian_servers 
+  hosts: usdge_servers 
   become: yes
   tasks:
+
     - name: Update apt-get repo and cache
       ansible.builtin.apt:
         update_cache: true
         cache_valid_time: 3600
         force_apt_get: true
+
     - name: Upgrade all installed packages
       ansible.builtin.apt:
         name: "*"
         state: latest
         update_cache: true
+
     - name: Remove unnecessary packages
       ansible.builtin.apt:
         autoremove: yes
+
     - name: Reboot if necessary
       ansible.builtin.reboot:
         when: apt_update_status.changed
